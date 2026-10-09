@@ -2,6 +2,8 @@
 
 ![Calculator](https://github.com/Logan-Funai-Skyline/programming-porfolio/blob/main/images/Calculator.png?raw=true)
 
+[Link to Source Code] (https://github.com/Logan-Funai-Skyline/programming-porfolio/tree/main/src/Calculator)
+
 ## Overview
 This is a calculator I have... 3 sentances
 
