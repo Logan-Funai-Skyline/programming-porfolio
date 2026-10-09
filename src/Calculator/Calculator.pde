@@ -1,6 +1,6 @@
 //Logan Funai | 15 Sept 2026 | Calculator
 Button[] numButtons = new Button[10];
-Button[] opButtons = new Button[14];
+Button[] opButtons = new Button[15];
 float l, r, result;
 char op;
 boolean left, newEntry;
@@ -41,6 +41,7 @@ void setup() {
   opButtons[11] = new Button(105, 220, 0, 'c');
   opButtons[12] = new Button(135, 220, 0, 't');
   opButtons[13] = new Button(105, 190, 0, '%');
+  opButtons[14] = new Button(175, 205, 30, '←');
 }
 
 void draw() {
@@ -165,6 +166,8 @@ void keyPressed() {
     handleEvent('t', false);
   } else if (keyCode == 82) {
     handleEvent('R', false);
+  } else if (keyCode == 8) {
+    handleEvent('←', false);
   }
 }
 
@@ -277,6 +280,11 @@ void handleEvent(char val, boolean isNum) {
       } else {
         r = r/100;
         displayVal = str(r);
+      }
+    } else if (clicked == '←') {
+      //backspace
+      if (displayVal.length() > 0) {
+        displayVal = displayVal.substring(0, displayVal.length() - 1);
       }
     }
   }
