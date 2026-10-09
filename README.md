@@ -1,5 +1,7 @@
 ## OOP Calculator for Programming 1
 
+![Calculator](https://github.com/Logan-Funai-Skyline/programming-porfolio/blob/main/images/Calculator.png?raw=true)
+
 ## Overview
 This is a calculator I have... 3 sentances
 
