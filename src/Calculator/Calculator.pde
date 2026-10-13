@@ -62,6 +62,12 @@ void drawDisplay() {
   rect(105, 70, 110, 40);
   fill(0);
   textAlign(RIGHT);
+  if(displayVal.length()>14) {
+    textSize(15 -.27*(displayVal.length()));
+  } if(displayVal.length()>20) {
+    textSize(15);
+    displayVal = "Too many digits";
+  }
   text(displayVal, width-55, 75);
   //println(displayVal); //If you want it to write at the button
 }
@@ -86,28 +92,6 @@ void mouseReleased() {
   println("left:" + left);
   println("Op:" + op);
 }
-//    if (opButtons[i].val == '=') {
-//      // Perform a calculation
-//      performCalc();
-//    } else if (opButtons[i].val == '+') {
-//      displayVal = str(opButtons[i].val);
-//      left = !left;
-//      op = opButtons[i].val;
-//    } else if (opButtons[i].val == '-') {
-//      displayVal = str(opButtons[i].val);
-//      left = !left;
-//      op = opButtons[i].val;
-//    } else if (opButtons[i].val == '÷') {
-//      displayVal = str(opButtons[i].val);
-//      left = !left;
-//      op = opButtons[i].val;
-//    } else if (opButtons[i].val == '×') {
-//      displayVal = str(opButtons[i].val);
-//      left = !left;
-//      op = opButtons[i].val;
-//    }
-//  }
-//}
 
 void performCalc() {
   if (op == '+') {
@@ -176,7 +160,7 @@ void handleEvent(char val, boolean isNum) {
     //Do number stuff
     String digit = str(val);
 
-    if (newEntry || displayVal.equals("0.0")) {
+    if (newEntry || displayVal.equals("0.0") || displayVal.equals("Infinity") || displayVal.equals("Too many digits")) {
       displayVal = digit;
       newEntry = false;
     } else {
