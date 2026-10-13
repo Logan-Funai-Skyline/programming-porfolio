@@ -23,10 +23,8 @@ Processing version: 4.0.1
 Click the buttons or use your keyboard.
 
 Keyboard:
-Working keys are numbers 1-9, the four main operators, decimal point as a period, s as sine, c as cosine, t as tangent, ← as backspace, and R as reset.
+Working keys are numbers 1-9, the four main operators, decimal point as a period, s as sine, c as cosine, t as tangent, ← as backspace, enter, and R as reset.
 ## Project Files
 There are two main parts of the calculator which are the main logic and interface, and the buttons. 
 ## Testing
 One example is inputing 19^2 / 43 and correctly getting 8.395349
-## Next Step
-Next I will add a limit to the digits to stop it from exiting the screen.
